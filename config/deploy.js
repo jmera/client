@@ -1,24 +1,36 @@
 /* jshint node: true */
+var VALID_DEPLOY_TARGETS = [ 'staging', 'production' ];
 
 module.exports = function(deployTarget) {
+  if (VALID_DEPLOY_TARGETS.indexOf(deployTarget) === -1) {
+    throw new Error('Invalid deployTarget ' + deployTarget);
+  }
+
   var ENV = {
-    build: {}
+    build: {
+      environment: deployTarget
+    },
+    revisionData: {
+      type: 'git-commit'
+    },
+    's3-index': {
+      region: 'us-east-1',
+      allowOverwrite: true
+    },
+    s3: {
+      region: 'us-east-1'
+    }
     // include other plugin configuration that applies to all deploy targets here
   };
 
-  if (deployTarget === 'development') {
-    ENV.build.environment = 'development';
-    // configure other plugins for development deploy target here
-  }
-
   if (deployTarget === 'staging') {
-    ENV.build.environment = 'production';
-    // configure other plugins for staging deploy target here
+    ENV['s3-index'].bucket = 'staging.rentirooms.com';
+    ENV.s3.bucket = 'staging.rentirooms.com';
   }
 
   if (deployTarget === 'production') {
-    ENV.build.environment = 'production';
-    // configure other plugins for production deploy target here
+    ENV['s3-index'].bucket = 'rentirooms.com';
+    ENV.s3.bucket = 'rentirooms.com';
   }
 
   // Note: if you need to build some configuration asynchronously, you can return
