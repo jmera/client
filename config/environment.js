@@ -40,7 +40,13 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
+    // TODO this needs to be updated when DNS zone files are updated
+    ENV.host = 'http://api-production.us-west-2.elasticbeanstalk.com';
+  }
 
+  if (environment === 'staging') {
+    // TODO this needs to be updated when DNS zone files are updated
+    ENV.host = 'http://api-staging.us-west-2.elasticbeanstalk.com';
   }
 
   return ENV;
