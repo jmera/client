@@ -17,7 +17,15 @@
   height: 50px;
 }
 
-// Import other third-party libraries as necessary
-@import "bootstrap";
-// @import "bootstrap/theme";
+html .ember-application {
+  background: url("images/background.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 
+// Import other third-party libraries as necessary
+// @import "bootstrap/theme";
+@import "bootstrap";
+@import url("//fonts.googleapis.com/css?family=Seaweed+Script");
