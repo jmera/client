@@ -1,5 +1,8 @@
 @import "variables";
+
 @import "routes/index";
+@import "routes/i_have_a_room";
+@import "components/logo_main";
 
 // Global app-wide styles
 .spacer-sm {
@@ -14,9 +17,7 @@
   height: 50px;
 }
 
+// Import other third-party libraries as necessary
 @import "bootstrap";
-// Import other libraries as necessary
 // @import "bootstrap/theme";
-
-// @import "components/";
 

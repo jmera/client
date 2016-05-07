@@ -11,7 +11,7 @@ test('it renders', function(assert) {
 
   this.render(hbs`{{logo-main}}`);
 
-  assert.equal(this.$().text().trim(), '');
+  assert.equal(this.$().text().trim(), "\"ROOM RENTING'S NEVER BEEN EASIER\"");
 
   // Template block usage:
   this.render(hbs`
@@ -20,5 +20,6 @@ test('it renders', function(assert) {
     {{/logo-main}}
   `);
 
-  assert.equal(this.$().text().trim(), 'template block text');
+  // assert contains template block text
+  assert.notEqual(this.$().text().trim().indexOf('template block text'), -1);
 });
