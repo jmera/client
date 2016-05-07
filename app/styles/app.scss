@@ -1,9 +1,11 @@
 @import "bootstrap";
-@import "variables";
-// Import other stuff as necessary
+// Import other libraries as necessary
 // @import "bootstrap/theme";
 
-// Global styles
+@import "variables";
+// @import "components/";
+
+// Global app-wide styles
 .spacer-sm {
   height: 10px;
 }
