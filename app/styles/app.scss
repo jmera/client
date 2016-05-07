@@ -1,9 +1,5 @@
-@import "bootstrap";
-// Import other libraries as necessary
-// @import "bootstrap/theme";
-
 @import "variables";
-// @import "components/";
+@import "routes/index";
 
 // Global app-wide styles
 .spacer-sm {
@@ -17,3 +13,10 @@
 .spacer-lg {
   height: 50px;
 }
+
+@import "bootstrap";
+// Import other libraries as necessary
+// @import "bootstrap/theme";
+
+// @import "components/";
+
