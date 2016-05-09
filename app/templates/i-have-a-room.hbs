@@ -1,3 +1,237 @@
-<div id="i-have-a-room">
-  {{!-- {{outlet}} --}}
-</div>
+<div id="i-have-a-room" class="row">
+  <form class="col-md-8 col-md-offset-2">
+    <h3>About You</h3>
+    <div class="row">
+      <div class="col-md-3">
+        <input type="text" class="form-control" placeholder="First Name">
+        <label>First Name</label>
+      </div>
+      <div class="col-md-3">
+        <input type="text" class="form-control" placeholder="Last Name">
+        <label>Last Name</label>
+      </div>
+      <div class="col-md-3">
+        <input type="email" class="form-control" placeholder="Email">
+        <label>Email</label>
+      </div>
+      <div class="col-md-3">
+        <input type="tel" class="form-control" placeholder="Phone">
+        <label>Phone</label>
+      </div>
+    </div>
+
+    <h3>Address</h3>
+    <div class="row">
+      <div class="col-md-9">
+        <input type="text" class="form-control" placeholder="Line 1">
+        <label>Line 1</label>
+      </div>
+      <div class="col-md-3">
+        <input type="text" class="form-control" placeholder="Apt">
+        <label>Apt</label>
+      </div>
+    </div>
+
+    <div class="spacer-sm"></div>
+
+    <div class="row">
+      <div class="col-md-4">
+        <input type="text" class="form-control" placeholder="City">
+        <label>City</label>
+      </div>
+      <div class="col-md-4">
+        <input type="text" class="form-control" placeholder="State" maxlength="2">
+        <label>State</label>
+      </div>
+      <div class="col-md-4">
+        <input type="text" class="form-control" placeholder="Zip Code">
+        <label>Zip Code</label>
+      </div>
+    </div>
+
+    <h3>Room Info</h3>
+    <p>Is your room furnished?</p>
+    <div class="row">
+      <div class="col-md-12">
+        <label class="radio-inline">
+          <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">Yes
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">No
+        </label>
+      </div>
+    </div>
+
+    <div class="spacer-md"></div>
+
+    <p>Tell us what is included in your room:</p>
+    <div class="row">
+      <div class="col-md-3">
+        <label class="checkbox-inline">
+          <input type="checkbox">Bed
+        </label>
+      </div>
+      <div class="col-md-3">
+        <label class="checkbox-inline">
+          <input type="checkbox">Closet
+        </label>
+      </div>
+      <div class="col-md-3">
+        <label class="checkbox-inline">
+          <input type="checkbox">Bathroom
+        </label>
+      </div>
+      <div class="col-md-3">
+        <label class="checkbox-inline">
+          <input type="checkbox">Rug
+        </label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3">
+        <label class="checkbox-inline">
+          <input type="checkbox">TV
+        </label>
+      </div>
+      <div class="col-md-3">
+        <label class="checkbox-inline">
+          <input type="checkbox">Night Desk
+        </label>
+      </div>
+      <div class="col-md-3">
+        <label class="checkbox-inline">
+          <input type="checkbox">Wi-Fi
+        </label>
+      </div>
+      <div class="col-md-3">
+        <label class="checkbox-inline">
+          <input type="checkbox">Radio
+        </label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3">
+        <label class="checkbox-inline">
+          <input type="checkbox">Drawer
+        </label>
+      </div>
+      <div class="col-md-3">
+        <label class="checkbox-inline">
+          <input type="checkbox">Cable
+        </label>
+      </div>
+      <div class="col-md-3">
+        <label class="checkbox-inline">
+          <input type="checkbox">Electricity
+        </label>
+      </div>
+      <div class="col-md-3">
+        <label class="checkbox-inline">
+          <input type="checkbox">Mirror
+        </label>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <label>Other:</label>
+        <input type="text" class="form-control">
+      </div>
+    </div>
+
+    <div class="spacer-md"></div>
+
+    <div class="row">
+      <div class="col-md-8">
+        Do you live in the home?
+      </div>
+      <div class="col-md-4">
+        <label class="radio-inline">
+          <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">Yes
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">No
+        </label>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-8">
+        Sharing kitchen?
+      </div>
+      <div class="col-md-4">
+        <label class="radio-inline">
+          <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">Yes
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">No
+        </label>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-8">
+        Sharing common bathroom?
+      </div>
+      <div class="col-md-4">
+        <label class="radio-inline">
+          <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">Yes
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">No
+        </label>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-8">
+        Sharing living room?
+      </div>
+      <div class="col-md-4">
+        <label class="radio-inline">
+          <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">Yes
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">No
+        </label>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-8">
+        Pets allowed?
+      </div>
+      <div class="col-md-4">
+        <label class="radio-inline">
+          <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">Yes
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">No
+        </label>q
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-8">
+        Visitor policy
+      </div>
+      <div class="col-md-4">
+        <label class="radio-inline">
+          <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">Yes
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">No
+        </label>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <label>If yes what policy?</label>
+        <input type="text" class="form-control">
+      </div>
+    </div>
+
+    <div class="spacer-lg"></div>
+  </form>
+</div><!-- /.row -->
