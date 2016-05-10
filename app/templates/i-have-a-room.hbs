@@ -54,10 +54,10 @@
     <div class="row">
       <div class="col-sm-12">
         <label class="radio-inline">
-          <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">Yes
+          <input type="radio" name="room[furnished]">Yes
         </label>
         <label class="radio-inline">
-          <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">No
+          <input type="radio" name="room[furnished]">No
         </label>
       </div>
     </div>
@@ -147,10 +147,10 @@
       </div>
       <div class="col-sm-3 col-xs-4">
         <label class="radio-inline">
-          <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">Yes
+          <input type="radio" name="room[resides]">Yes
         </label>
         <label class="radio-inline">
-          <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">No
+          <input type="radio" name="room[resides]">No
         </label>
       </div>
     </div>
@@ -161,10 +161,10 @@
       </div>
       <div class="col-sm-3 col-xs-4">
         <label class="radio-inline">
-          <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">Yes
+          <input type="radio" name="room[shared_kitchen]">Yes
         </label>
         <label class="radio-inline">
-          <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">No
+          <input type="radio" name="room[shared_kitchen]">No
         </label>
       </div>
     </div>
@@ -175,10 +175,10 @@
       </div>
       <div class="col-sm-3 col-xs-4">
         <label class="radio-inline">
-          <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">Yes
+          <input type="radio" name="room[shared_bathroom]">Yes
         </label>
         <label class="radio-inline">
-          <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">No
+          <input type="radio" name="room[shared_bathroom]">No
         </label>
       </div>
     </div>
@@ -189,10 +189,10 @@
       </div>
       <div class="col-sm-3 col-xs-4">
         <label class="radio-inline">
-          <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">Yes
+          <input type="radio" name="room[shared_living_room]">Yes
         </label>
         <label class="radio-inline">
-          <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">No
+          <input type="radio" name="room[shared_living_room]">No
         </label>
       </div>
     </div>
@@ -203,10 +203,10 @@
       </div>
       <div class="col-sm-3 col-xs-4">
         <label class="radio-inline">
-          <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">Yes
+          <input type="radio" name="room[pets_allowed]">Yes
         </label>
         <label class="radio-inline">
-          <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">No
+          <input type="radio" name="room[pets_allowed]">No
         </label>
       </div>
     </div>
@@ -217,10 +217,10 @@
       </div>
       <div class="col-sm-3 col-xs-4">
         <label class="radio-inline">
-          <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">Yes
+          <input type="radio" name="room[visitors_allowed]">Yes
         </label>
         <label class="radio-inline">
-          <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">No
+          <input type="radio" name="room[visitors_allowed]">No
         </label>
       </div>
     </div>
@@ -228,7 +228,7 @@
     <div class="row">
       <div class="col-sm-12">
         <label>If yes what policy?</label>
-        <input type="text" class="form-control">
+        <input type="text" name="room[visitor_policy]" class="form-control">
       </div>
     </div>
 
@@ -236,13 +236,13 @@
     <div class="row">
       <div class="col-sm-12">
         <label class="radio-inline">
-          <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">Weekly
+          <input type="radio" name="room[rent_type]" value="weekly">Weekly
         </label>
         <label class="radio-inline">
-          <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">Bi-weekly
+          <input type="radio" name="room[rent_type]" value="bi_weekly">Bi-weekly
         </label>
         <label class="radio-inline">
-          <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">Monthly
+          <input type="radio" name="room[rent_type]" value="monthly">Monthly
         </label>
       </div>
     </div>
@@ -250,7 +250,7 @@
     <div class="row">
       <div class="col-sm-6">
         <label>How much (dollar amount):</label>
-        <input type="text" class="form-control">
+        <input type="text" name="room[rent_amount]" class="form-control">
       </div>
     </div>
 
