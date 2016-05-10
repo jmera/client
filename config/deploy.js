@@ -29,8 +29,8 @@ module.exports = function(deployTarget) {
   }
 
   if (deployTarget === 'production') {
-    ENV['s3-index'].bucket = 'rentirooms.com';
-    ENV.s3.bucket = 'rentirooms.com';
+    ENV['s3-index'].bucket = 'production.rentirooms.com';
+    ENV.s3.bucket = 'production.rentirooms.com';
   }
 
   // Note: if you need to build some configuration asynchronously, you can return
