@@ -1,0 +1,19 @@
+#navbar-bottom {
+  background-color: inherit;
+  border-style: none;
+
+  .container-fluid {
+    padding: 0px;
+    position: absolute;
+    bottom: 0px;
+  }
+
+  .btn-group a {
+    background-color: $rr-orange;
+    color: white;
+
+    &:hover {
+      background-color: darken($rr-orange, 10%);
+    }
+  }
+}

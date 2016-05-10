@@ -1,7 +1,7 @@
 import { moduleForComponent, test } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
 
-moduleForComponent('logo-main', 'Integration | Component | logo main', {
+moduleForComponent('navbar-bottom', 'Integration | Component | navbar bottom', {
   integration: true
 });
 
@@ -9,16 +9,15 @@ test('it renders', function(assert) {
   // Set any properties with this.set('myProperty', 'value');
   // Handle any actions with this.on('myAction', function(val) { ... });
 
-  this.render(hbs`{{logo-main}}`);
+  this.render(hbs`{{navbar-bottom}}`);
 
-  assert.equal(this.$().text().trim().toLowerCase(), 
-    "\"room renting has never been easier.\"".toLowerCase());
+  // TODO assert text I have/need room, How it works is here
 
   // Template block usage:
   this.render(hbs`
-    {{#logo-main}}
+    {{#navbar-bottom}}
       template block text
-    {{/logo-main}}
+    {{/navbar-bottom}}
   `);
 
   // assert contains template block text

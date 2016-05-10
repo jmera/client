@@ -1,9 +1,10 @@
 @import "variables";
 
-@import "routes/index";
 @import "routes/i_have_a_room";
 @import "routes/how_it_works";
+
 @import "components/logo_main";
+@import "components/navbar_bottom";
 
 // Global app-wide styles
 .spacer-sm {
@@ -24,6 +25,9 @@ html .ember-application {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+
+  // For sticky bottom nav
+  padding-bottom: 40px;
 }
 
 // Import other third-party libraries as necessary

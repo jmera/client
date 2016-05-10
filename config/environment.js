@@ -41,13 +41,13 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-    // TODO this needs to be updated when DNS zone files are updated
-    ENV.host = 'http://api-production.us-west-2.elasticbeanstalk.com';
+    // TODO this needs to be updated after SSL certs are installed
+    ENV.host = 'http://api.rentirooms.com';
   }
 
   if (environment === 'staging') {
-    // TODO this needs to be updated when DNS zone files are updated
-    ENV.host = 'http://api-staging.us-west-2.elasticbeanstalk.com';
+    // TODO this needs to be updated after SSL certs are installed
+    ENV.host = 'http://staging.api.rentirooms.com';
   }
 
   return ENV;

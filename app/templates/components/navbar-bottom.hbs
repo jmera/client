@@ -1,0 +1,16 @@
+<nav id="navbar-bottom" class="navbar navbar-default navbar-fixed-bottom">
+  <div class="container-fluid">
+    <div class="btn-group btn-group-justified" role="group" aria-label="...">
+      <div class="btn-group" role="group">
+        <a type="button" class="btn btn-default">I need a room</a>
+      </div>
+      <div class="btn-group" role="group">
+        {{link-to "I have a room" "i-have-a-room" type="button" class="btn btn-default"}}
+      </div>
+      <div class="btn-group" role="group">
+        {{link-to "How it works" "how-it-works" type="button" class="btn btn-default"}}
+      </div>
+    </div>
+  </div>
+</nav>
+{{yield}}
