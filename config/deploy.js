@@ -10,26 +10,33 @@ module.exports = function(deployTarget) {
     build: {
       environment: deployTarget
     },
+    redis: {
+      allowOverwrite: true,
+      keyPrefix: 'client:index',
+
+    },
     revisionData: {
       type: 'git-commit'
     },
-    's3-index': {
-      region: 'us-east-1',
-      allowOverwrite: true
-    },
     s3: {
+      prefix: 'client',
       region: 'us-east-1'
+    },
+    'ssh-tunnel': {
+      username: "ec2-user",
+      host: "ec2-52-32-128-36.us-west-2.compute.amazonaws.com",
+      dstPort: 6379,
     }
     // include other plugin configuration that applies to all deploy targets here
   };
 
   if (deployTarget === 'staging') {
-    ENV['s3-index'].bucket = 'staging.rentirooms.com';
+    ENV['ssh-tunnel'].dstHost = "api-staging.zhlz3v.0001.usw2.cache.amazonaws.com";
+    // ENV.redis.url = 'redis://api-staging.zhlz3v.0001.usw2.cache.amazonaws.com:6739';
     ENV.s3.bucket = 'staging.rentirooms.com';
   }
 
   if (deployTarget === 'production') {
-    ENV['s3-index'].bucket = 'production.rentirooms.com';
     ENV.s3.bucket = 'production.rentirooms.com';
   }
 
