@@ -5,9 +5,7 @@ var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
-    fingerprint: {
-      enabled: true
-    },
+    fingerprint: {},
     sassOptions: {
         includePaths: [
           'bower_components/bootstrap-sass/assets/stylesheets'
@@ -17,6 +15,10 @@ module.exports = function(defaults) {
 
   if (app.env === 'development') {
     app.options.fingerprint.prepend = "http://localhost:4200/";
+  }
+
+  if (app.env === 'staging' || app.env === 'production') {
+    app.options.fingerprint.enabled = true;
   }
 
   // assets are hosted on s3
