@@ -15,6 +15,10 @@ module.exports = function(defaults) {
       }
   });
 
+  if (app.env === 'development') {
+    app.options.fingerprint.prepend = "http://localhost:4200/";
+  }
+
   // assets are hosted on s3
   if (app.env === 'staging') {
     app.options.fingerprint.prepend = "//staging.rentirooms.com.s3-website-us-east-1.amazonaws.com/client/";
