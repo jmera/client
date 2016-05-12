@@ -1,15 +1,28 @@
 /*jshint node:true*/
 /* global require, module */
+
 var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
+    fingerprint: {
+      enabled: true
+    },
     sassOptions: {
         includePaths: [
           'bower_components/bootstrap-sass/assets/stylesheets'
         ]
       }
   });
+
+  // assets are hosted on s3
+  if (app.env === 'staging') {
+    app.options.fingerprint.prepend = "//staging.rentirooms.com.s3-website-us-east-1.amazonaws.com/client/";
+  }
+
+  if (app.env === 'production') {
+    app.options.fingerprint.prepend = "//production.rentirooms.com.s3-website-us-east-1.amazonaws.com/client/";
+  }
 
   app.import('bower_components/bootstrap-sass/assets/javascripts/bootstrap.js');
 
