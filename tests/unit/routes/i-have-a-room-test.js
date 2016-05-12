@@ -9,3 +9,8 @@ test('it exists', function(assert) {
   let route = this.subject();
   assert.ok(route);
 });
+
+test('it has submitForm action', function(assert) {
+  let actions = this.subject().actions;
+  assert.ok(actions.submitForm);
+});
