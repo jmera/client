@@ -40,8 +40,9 @@ export default Model.extend({
   user: belongsTo('user'),
   address: belongsTo('address'),
 
+  other: attr('string'),
   visitorPolicy: attr('string'),
-  rentType: attr('integer'),
+  rentType: attr('number'),
   furnished: attr('boolean'),
   bed: attr('boolean'),
   closet: attr('boolean'),

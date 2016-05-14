@@ -5,6 +5,7 @@
     "location",
     "setTimeout",
     "$",
+    "jQuery",
     "-Promise",
     "define",
     "console",

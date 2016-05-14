@@ -7,27 +7,27 @@
         <label>First Name</label>
       </div>
       <div class="col-sm-3">
-        <input type="text" class="form-control" placeholder="Last Name">
+        {{input value=user.lastName type="text" class="form-control" placeholder="Last Name"}}
         <label>Last Name</label>
       </div>
       <div class="col-sm-3">
-        <input type="email" class="form-control" placeholder="Email">
+        {{input value=user.email type="email" class="form-control" placeholder="Email"}}
         <label>Email</label>
       </div>
       <div class="col-sm-3">
-        <input type="tel" class="form-control" placeholder="Phone">
-        <label>Phone</label>
+        {{input value=user.phoneNumber type="tel" class="form-control" placeholder="Phone"}}
+        <label>Phone Number</label>
       </div>
     </div>
 
     <h3>Address</h3>
     <div class="row">
       <div class="col-sm-9">
-        <input type="text" class="form-control" placeholder="Line 1">
+        {{input value=address.line1 type="text" class="form-control" placeholder="Line 1"}}
         <label>Line 1</label>
       </div>
       <div class="col-sm-3">
-        <input type="text" class="form-control" placeholder="Apt">
+        {{input value=address.apt type="text" class="form-control" placeholder="Apt"}}
         <label>Apt</label>
       </div>
     </div>
@@ -36,15 +36,15 @@
 
     <div class="row">
       <div class="col-sm-4">
-        <input type="text" class="form-control" placeholder="City">
+        {{input value=address.city type="text" class="form-control" placeholder="City"}}
         <label>City</label>
       </div>
       <div class="col-sm-4">
-        <input type="text" class="form-control" placeholder="State" maxlength="2">
+        {{input value=address.state type="text" class="form-control" placeholder="State" maxlength="2"}}
         <label>State</label>
       </div>
       <div class="col-sm-4">
-        <input type="text" class="form-control" placeholder="Zip Code">
+        {{input value=address.zipCode type="text" class="form-control" placeholder="Zip Code"}}
         <label>Zip Code</label>
       </div>
     </div>
@@ -54,10 +54,10 @@
     <div class="row">
       <div class="col-sm-12">
         <label class="radio-inline">
-          <input type="radio" name="room[furnished]">Yes
+          {{input value=room.furnished type="radio" name="model[furnished]"}}Yes
         </label>
         <label class="radio-inline">
-          <input type="radio" name="room[furnished]">No
+          {{input value=room.furnished type="radio" name="model[furnished]"}}No
         </label>
       </div>
     </div>
@@ -135,7 +135,7 @@
     <div class="row">
       <div class="col-sm-12">
         <label>Other:</label>
-        <input type="text" class="form-control">
+        {{input value=room.other type="text" class="form-control"}}
       </div>
     </div>
 
@@ -161,10 +161,10 @@
       </div>
       <div class="col-sm-3 col-xs-4">
         <label class="radio-inline">
-          <input type="radio" name="room[shared_kitchen]">Yes
+          <input type="radio" name="room[sharedKitchen]">Yes
         </label>
         <label class="radio-inline">
-          <input type="radio" name="room[shared_kitchen]">No
+          <input type="radio" name="room[sharedKitchen]">No
         </label>
       </div>
     </div>
@@ -175,10 +175,10 @@
       </div>
       <div class="col-sm-3 col-xs-4">
         <label class="radio-inline">
-          <input type="radio" name="room[shared_bathroom]">Yes
+          <input type="radio" name="room[sharedBathroom]">Yes
         </label>
         <label class="radio-inline">
-          <input type="radio" name="room[shared_bathroom]">No
+          <input type="radio" name="room[sharedBathroom]">No
         </label>
       </div>
     </div>
@@ -189,10 +189,10 @@
       </div>
       <div class="col-sm-3 col-xs-4">
         <label class="radio-inline">
-          <input type="radio" name="room[shared_living_room]">Yes
+          <input type="radio" name="room[sharedLivingRoom]">Yes
         </label>
         <label class="radio-inline">
-          <input type="radio" name="room[shared_living_room]">No
+          <input type="radio" name="room[sharedLivingRoom]">No
         </label>
       </div>
     </div>
@@ -203,10 +203,10 @@
       </div>
       <div class="col-sm-3 col-xs-4">
         <label class="radio-inline">
-          <input type="radio" name="room[pets_allowed]">Yes
+          <input type="radio" name="room[petsAllowed]">Yes
         </label>
         <label class="radio-inline">
-          <input type="radio" name="room[pets_allowed]">No
+          <input type="radio" name="room[petsAllowed]">No
         </label>
       </div>
     </div>
@@ -217,10 +217,10 @@
       </div>
       <div class="col-sm-3 col-xs-4">
         <label class="radio-inline">
-          <input type="radio" name="room[visitors_allowed]">Yes
+          <input type="radio" name="room[visitorsAllowed]">Yes
         </label>
         <label class="radio-inline">
-          <input type="radio" name="room[visitors_allowed]">No
+          <input type="radio" name="room[visitorsAllowed]">No
         </label>
       </div>
     </div>
@@ -228,7 +228,7 @@
     <div class="row">
       <div class="col-sm-12">
         <label>If yes what policy?</label>
-        <input type="text" name="room[visitor_policy]" class="form-control">
+        {{input value=model.visitorPolicy type="text" class="form-control"}}
       </div>
     </div>
 
@@ -236,13 +236,13 @@
     <div class="row">
       <div class="col-sm-12">
         <label class="radio-inline">
-          <input type="radio" name="room[rent_type]" value="weekly">Weekly
+          <input type="radio" name="room[rentType]" value="weekly">Weekly
         </label>
         <label class="radio-inline">
-          <input type="radio" name="room[rent_type]" value="bi_weekly">Bi-weekly
+          <input type="radio" name="room[rentType]" value="biWeekly">Bi-weekly
         </label>
         <label class="radio-inline">
-          <input type="radio" name="room[rent_type]" value="monthly">Monthly
+          <input type="radio" name="room[rentType]" value="monthly">Monthly
         </label>
       </div>
     </div>
@@ -250,7 +250,7 @@
     <div class="row">
       <div class="col-sm-6">
         <label>How much (dollar amount):</label>
-        <input type="text" name="room[rent_amount]" class="form-control">
+        {{input value=room.rentAmount type="text" name="room[rentAmount]" class="form-control"}}
       </div>
     </div>
 
