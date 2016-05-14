@@ -54,10 +54,10 @@
     <div class="row">
       <div class="col-sm-12">
         <label class="radio-inline">
-          {{input value=room.furnished type="radio" name="model[furnished]"}}Yes
+          {{radio-button value=true groupValue=room.furnished name="room[furnished]"}} Yes
         </label>
         <label class="radio-inline">
-          {{input value=room.furnished type="radio" name="model[furnished]"}}No
+          {{radio-button value=false groupValue=room.furnished name="room[furnished]"}} No
         </label>
       </div>
     </div>
@@ -68,66 +68,66 @@
     <div class="row">
       <div class="col-sm-3">
         <label class="checkbox-inline">
-          <input type="checkbox">Bed
+          {{input type="checkbox" checked=room.bed}} Bed
         </label>
       </div>
       <div class="col-sm-3">
         <label class="checkbox-inline">
-          <input type="checkbox">Closet
+          {{input type="checkbox" checked=room.closet}} Closet
         </label>
       </div>
       <div class="col-sm-3">
         <label class="checkbox-inline">
-          <input type="checkbox">Bathroom
+          {{input type="checkbox" checked=room.bathroom}} Bathroom
         </label>
       </div>
       <div class="col-sm-3">
         <label class="checkbox-inline">
-          <input type="checkbox">Rug
-        </label>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-sm-3">
-        <label class="checkbox-inline">
-          <input type="checkbox">TV
-        </label>
-      </div>
-      <div class="col-sm-3">
-        <label class="checkbox-inline">
-          <input type="checkbox">Night Desk
-        </label>
-      </div>
-      <div class="col-sm-3">
-        <label class="checkbox-inline">
-          <input type="checkbox">Wi-Fi
-        </label>
-      </div>
-      <div class="col-sm-3">
-        <label class="checkbox-inline">
-          <input type="checkbox">Radio
+          {{input type="checkbox" checked=room.rug}} Rug
         </label>
       </div>
     </div>
     <div class="row">
       <div class="col-sm-3">
         <label class="checkbox-inline">
-          <input type="checkbox">Drawer
+          {{input type="checkbox" checked=room.tv}} TV
         </label>
       </div>
       <div class="col-sm-3">
         <label class="checkbox-inline">
-          <input type="checkbox">Cable
+          {{input type="checkbox" checked=room.nightDesk}} Night Desk
         </label>
       </div>
       <div class="col-sm-3">
         <label class="checkbox-inline">
-          <input type="checkbox">Electricity
+          {{input type="checkbox" checked=room.wifi}} Wi-Fi
         </label>
       </div>
       <div class="col-sm-3">
         <label class="checkbox-inline">
-          <input type="checkbox">Mirror
+          {{input type="checkbox" checked=room.radio}} Radio
+        </label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-3">
+        <label class="checkbox-inline">
+          {{input type="checkbox" checked=room.drawer}} Drawer
+        </label>
+      </div>
+      <div class="col-sm-3">
+        <label class="checkbox-inline">
+          {{input type="checkbox" checked=room.cable}} Cable
+        </label>
+      </div>
+      <div class="col-sm-3">
+        <label class="checkbox-inline">
+          {{input type="checkbox" checked=room.electricity}} Electricity
+        </label>
+      </div>
+      <div class="col-sm-3">
+        <label class="checkbox-inline">
+          {{input type="checkbox" checked=room.mirror}} Mirror
         </label>
       </div>
     </div>
@@ -147,10 +147,10 @@
       </div>
       <div class="col-sm-3 col-xs-4">
         <label class="radio-inline">
-          <input type="radio" name="room[resides]">Yes
+          {{radio-button value=true groupValue=room.resides name="room[resides]"}} Yes
         </label>
         <label class="radio-inline">
-          <input type="radio" name="room[resides]">No
+          {{radio-button value=false groupValue=room.resides name="room[resides]"}} No
         </label>
       </div>
     </div>
@@ -161,10 +161,10 @@
       </div>
       <div class="col-sm-3 col-xs-4">
         <label class="radio-inline">
-          <input type="radio" name="room[sharedKitchen]">Yes
+          {{radio-button value=true groupValue=room.sharedKitchen name="room[sharedKitchen]"}} Yes
         </label>
         <label class="radio-inline">
-          <input type="radio" name="room[sharedKitchen]">No
+          {{radio-button value=false groupValue=room.sharedKitchen name="room[sharedKitchen]"}} No
         </label>
       </div>
     </div>
@@ -175,10 +175,10 @@
       </div>
       <div class="col-sm-3 col-xs-4">
         <label class="radio-inline">
-          <input type="radio" name="room[sharedBathroom]">Yes
+          {{radio-button value=true groupValue=room.sharedBathroom name="room[sharedBathroom]"}} Yes
         </label>
         <label class="radio-inline">
-          <input type="radio" name="room[sharedBathroom]">No
+          {{radio-button value=false groupValue=room.sharedBathroom name="room[sharedBathroom]"}} No
         </label>
       </div>
     </div>
@@ -189,10 +189,10 @@
       </div>
       <div class="col-sm-3 col-xs-4">
         <label class="radio-inline">
-          <input type="radio" name="room[sharedLivingRoom]">Yes
+          {{radio-button value=true groupValue=room.sharedLivingRoom name="room[sharedLivingRoom]"}} Yes
         </label>
         <label class="radio-inline">
-          <input type="radio" name="room[sharedLivingRoom]">No
+          {{radio-button value=false groupValue=room.sharedLivingRoom name="room[sharedLivingRoom]"}} No
         </label>
       </div>
     </div>
@@ -203,10 +203,10 @@
       </div>
       <div class="col-sm-3 col-xs-4">
         <label class="radio-inline">
-          <input type="radio" name="room[petsAllowed]">Yes
+          {{radio-button value=true groupValue=room.petsAllowed name="room[petsAllowed]"}} Yes
         </label>
         <label class="radio-inline">
-          <input type="radio" name="room[petsAllowed]">No
+          {{radio-button value=false groupValue=room.petsAllowed name="room[petsAllowed]"}} No
         </label>
       </div>
     </div>
@@ -217,10 +217,10 @@
       </div>
       <div class="col-sm-3 col-xs-4">
         <label class="radio-inline">
-          <input type="radio" name="room[visitorsAllowed]">Yes
+          {{radio-button value=true groupValue=room.visitorsAllowed name="room[visitorsAllowed]"}} Yes
         </label>
         <label class="radio-inline">
-          <input type="radio" name="room[visitorsAllowed]">No
+          {{radio-button value=false groupValue=room.visitorsAllowed name="room[visitorsAllowed]"}} No
         </label>
       </div>
     </div>
@@ -228,7 +228,7 @@
     <div class="row">
       <div class="col-sm-12">
         <label>If yes what policy?</label>
-        {{input value=model.visitorPolicy type="text" class="form-control"}}
+        {{input value=room.visitorPolicy type="text" class="form-control"}}
       </div>
     </div>
 
@@ -236,13 +236,13 @@
     <div class="row">
       <div class="col-sm-12">
         <label class="radio-inline">
-          <input type="radio" name="room[rentType]" value="weekly">Weekly
+          {{radio-button groupValue=room.rentType name="room[rentType]" value=0}} Weekly
         </label>
         <label class="radio-inline">
-          <input type="radio" name="room[rentType]" value="biWeekly">Bi-weekly
+          {{radio-button groupValue=room.rentType name="room[rentType]" value=1}} Bi-weekly
         </label>
         <label class="radio-inline">
-          <input type="radio" name="room[rentType]" value="monthly">Monthly
+          {{radio-button groupValue=room.rentType name="room[rentType]" value=2}} Monthly
         </label>
       </div>
     </div>

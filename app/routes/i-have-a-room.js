@@ -5,8 +5,28 @@ export default Ember.Route.extend({
     return Ember.RSVP.hash({
       room: this.store.createRecord('room', {
         furnished: true,
+        bed: true,
+        rug: true,
+        mirror: true,
+        nightDesk: false,
+        tv: false,
+        drawer: true,
+        closet: true,
+        cable: false,
+        bathroom: true,
+        wifi: false,
+        electricity: true,
+        radio: true,
+        visitorsAllowed: true,
+        petsAllowed: true,
+        sharedLivingRoom: true,
+        sharedBathroom: true,
+        sharedKitchen: true,
+        resides: true,
+        rentType: 1,
         other: 'Hot potatoe',
-        rentAmount: '150.00'
+        rentAmount: '150.00',
+        visitorPolicy: 'Only immediate family'
       }),
       user: this.store.createRecord('user', {
         firstName: 'John',
@@ -29,7 +49,7 @@ export default Ember.Route.extend({
       var room = controller.get('room');
       room.set('user', controller.get('user'));
       room.set('address', controller.get('address'));
-      console.log(room.serialize());
+      room.save();
     }
   },
   setupController(controller, model) {

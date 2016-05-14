@@ -33,27 +33,46 @@ import { belongsTo } from 'ember-data/relationships';
   mirror:boolean
   rentType:integer
 
+  visitorsAllowed:boolean
+  petsAllowed:boolean
+  sharedLivingRoom:boolean
+  sharedBathroom:boolean
+  sharedKitchen:boolean
+  resides:boolean
+  other::string
+  rentAmount:string
+  visitorPolicy:string
+
   NOTE: there has to be a more efficient way to store
         all these boolean attributes // TODO
 */
 export default Model.extend({
-  user: belongsTo('user'),
   address: belongsTo('address'),
+  user: belongsTo('user'),
 
-  other: attr('string'),
-  visitorPolicy: attr('string'),
-  rentType: attr('number'),
-  furnished: attr('boolean'),
-  bed: attr('boolean'),
-  closet: attr('boolean'),
-  bathroom: attr('boolean'),
-  rug: attr('boolean'),
-  tv: attr('boolean'),
-  nightDesk: attr('boolean'),
-  wifi: attr('boolean'),
-  radio: attr('boolean'),
-  drawer: attr('boolean'),
-  cable: attr('boolean'),
-  electricity: attr('boolean'),
-  mirror: attr('boolean')
+  other:            attr('string'),
+  petsAllowed:      attr('boolean'),
+  resides:          attr('boolean'),
+  sharedBathroom:   attr('boolean'),
+  sharedKitchen:    attr('boolean'),
+  sharedLivingRoom: attr('boolean'),
+  visitorsAllowed:  attr('boolean'),
+  visitorPolicy:    attr('string'),
+
+  rentAmount:       attr('string'),
+  rentType:         attr('number'),
+
+  bathroom:         attr('boolean'),
+  bed:              attr('boolean'),
+  cable:            attr('boolean'),
+  closet:           attr('boolean'),
+  drawer:           attr('boolean'),
+  electricity:      attr('boolean'),
+  furnished:        attr('boolean'),
+  mirror:           attr('boolean'),
+  nightDesk:        attr('boolean'),
+  radio:            attr('boolean'),
+  rug:              attr('boolean'),
+  tv:               attr('boolean'),
+  wifi:             attr('boolean')
 });
