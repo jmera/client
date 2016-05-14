@@ -1,4 +1,7 @@
 #i-have-a-room {
-  color: white;
-  form {}
+  color: $rr-blue;
+  form {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: $rr-border-radius;
+  }
 }
