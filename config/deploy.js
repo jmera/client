@@ -23,7 +23,7 @@ module.exports = function(deployTarget) {
     },
     'ssh-tunnel': {
       username: "ec2-user",
-      host: "ec2-52-32-128-36.us-west-2.compute.amazonaws.com",
+      host: "ec2-52-38-146-9.us-west-2.compute.amazonaws.com",
       dstPort: 6379,
     }
     // include other plugin configuration that applies to all deploy targets here
@@ -38,12 +38,12 @@ module.exports = function(deployTarget) {
 
   if (deployTarget === 'staging') {
     ENV.s3.bucket = 'staging.rentirooms.com';
-    ENV['ssh-tunnel'].dstHost = "api-staging.zhlz3v.0001.usw2.cache.amazonaws.com";
+    ENV['ssh-tunnel'].dstHost = "staging.zhlz3v.0001.usw2.cache.amazonaws.com";
   }
 
   if (deployTarget === 'production') {
-    ENV.s3.bucket = 'production.rentirooms.com';
-    ENV['ssh-tunnel'].dstHost = "api-production.zhlz3v.0001.usw2.cache.amazonaws.com";
+    ENV.s3.bucket = 'rentirooms.com';
+    ENV['ssh-tunnel'].dstHost = "production.zhlz3v.0001.usw2.cache.amazonaws.com";
   }
 
   // Note: if you need to build some configuration asynchronously, you can return

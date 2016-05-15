@@ -27,7 +27,7 @@ module.exports = function(defaults) {
   }
 
   if (app.env === 'production') {
-    app.options.fingerprint.prepend = "//production.rentirooms.com.s3-website-us-east-1.amazonaws.com/client/";
+    app.options.fingerprint.prepend = "//rentirooms.com.s3-website-us-east-1.amazonaws.com/client/";
   }
 
   app.import('bower_components/bootstrap-sass/assets/javascripts/bootstrap.js');
