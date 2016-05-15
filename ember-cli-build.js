@@ -23,11 +23,11 @@ module.exports = function(defaults) {
 
   // assets are hosted on s3
   if (app.env === 'staging') {
-    app.options.fingerprint.prepend = "//staging.rentirooms.com.s3-website-us-east-1.amazonaws.com/client/";
+    app.options.fingerprint.prepend = '//s3.amazonaws.com/staging.rentirooms.com/client/';
   }
 
   if (app.env === 'production') {
-    app.options.fingerprint.prepend = "//rentirooms.com.s3-website-us-east-1.amazonaws.com/client/";
+    app.options.fingerprint.prepend = '//s3.amazonaws.com/rentirooms.com/client/';
   }
 
   app.import('bower_components/bootstrap-sass/assets/javascripts/bootstrap.js');
